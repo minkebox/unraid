@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>MinkeBox</Name>
+  <Repository>registry.minkebox.net/minkebox/minke</Repository>
+  <Registry>https://hub.docker.com/r/minkebox/minkebox</Registry>
+  <Network>br0</Network>
+  <MyIP>192.168.51.5</MyIP>
+  <Shell>sh</Shell>
+  <Privileged>true</Privileged>
+  <Support/>
+  <Project/>
+  <Overview>MinkeBox is an Open Source project which aims to make it simple to run Docker applications on your home network without having to learn lots about Docker. Need a VPN into your home? Need a Wiki or a Webserver? Backups? A cache for Steam downloads to share with roommates? Add unsupported devices to your HomeKit network? Run a Minecraft server? Block Ads? Docker has all these applications ready to run, and MinkeBox makes it easy to get them running.</Overview>
+  <Category>Tools: Status:Beta</Category>
+  <WebUI>http://[IP]/</WebUI>
+  <TemplateURL/>
+  <Icon>https://gitlab.com/minkebox/minke/-/raw/master/assets/MinkeBoxLogo.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1586327561</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>MinkeBox is an Open Source project which aims to make it simple to run Docker applications on your home network without having to learn lots about Docker. Need a VPN into your home? Need a Wiki or a Webserver? Backups? A cache for Steam downloads to share with roommates? Add unsupported devices to your HomeKit network? Run a Minecraft server? Block Ads? Docker has all these applications ready to run, and MinkeBox makes it easy to get them running.</Description>
+  <Networking>
+    <Mode>br0</Mode>
+    <Publish/>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/MinkeBox</HostDir>
+      <ContainerDir>/minke</ContainerDir>
+      <Mode>rw,shared</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/</HostDir>
+      <ContainerDir>/mnt/native/unraid</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/var/run/docker.sock</HostDir>
+      <ContainerDir>/var/run/docker.sock</ContainerDir>
+      <Mode>ro</Mode>
+    </Volume>
+  </Data>
+  <Environment>
+    <Variable>
+      <Value>America/Los_Angeles</Value>
+      <Name>TZ</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="Root Storage" Target="/minke" Default="" Mode="rw,shared" Description="Directory where MinkeBox stores its data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/MinkeBox</Config>
+  <Config Name="Timezone" Target="TZ" Default="America/Los_Angeles" Mode="" Description="Local timezone" Type="Variable" Display="always" Required="false" Mask="false">America/Los_Angeles</Config>
+  <Config Name="Unraid" Target="/mnt/native/unraid" Default="" Mode="rw" Description="Access to the Unraid file system" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
+  <Config Name="Docker Access" Target="/var/run/docker.sock" Default="" Mode="ro" Description="MinkeBox's access to the Docker" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
+</Container>
