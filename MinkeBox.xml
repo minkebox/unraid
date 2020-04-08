@@ -27,7 +27,7 @@
   </Networking>
   <Data>
     <Volume>
-      <HostDir>/mnt/user/MinkeBox</HostDir>
+      <HostDir></HostDir>
       <ContainerDir>/minke</ContainerDir>
       <Mode>rw,shared</Mode>
     </Volume>
