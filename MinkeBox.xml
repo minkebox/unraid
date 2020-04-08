@@ -50,7 +50,7 @@
     </Variable>
   </Environment>
   <Labels/>
-  <Config Name="Root Storage" Target="/minke" Default="" Mode="rw,shared" Description="Directory where MinkeBox stores its data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/MinkeBox</Config>
+  <Config Name="Root Storage" Target="/minke" Default="" Mode="rw,shared" Description="Directory where MinkeBox stores its data" Type="Path" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Timezone" Target="TZ" Default="America/Los_Angeles" Mode="" Description="Local timezone" Type="Variable" Display="always" Required="false" Mask="false">America/Los_Angeles</Config>
   <Config Name="Unraid" Target="/mnt/native/unraid" Default="" Mode="rw" Description="Access to the Unraid file system" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/</Config>
   <Config Name="Docker Access" Target="/var/run/docker.sock" Default="" Mode="ro" Description="MinkeBox's access to the Docker" Type="Path" Display="advanced" Required="true" Mask="false">/var/run/docker.sock</Config>
