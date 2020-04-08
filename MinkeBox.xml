@@ -4,7 +4,7 @@
   <Repository>registry.minkebox.net/minkebox/minke</Repository>
   <Registry>https://hub.docker.com/r/minkebox/minkebox</Registry>
   <Network>br0</Network>
-  <MyIP>192.168.51.5</MyIP>
+  <MyIP></MyIP>
   <Shell>sh</Shell>
   <Privileged>true</Privileged>
   <Support/>
@@ -17,7 +17,7 @@
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1586327561</DateInstalled>
+  <DateInstalled></DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>MinkeBox is an Open Source project which aims to make it simple to run Docker applications on your home network without having to learn lots about Docker. Need a VPN into your home? Need a Wiki or a Webserver? Backups? A cache for Steam downloads to share with roommates? Add unsupported devices to your HomeKit network? Run a Minecraft server? Block Ads? Docker has all these applications ready to run, and MinkeBox makes it easy to get them running.</Description>
